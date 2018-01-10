@@ -1,0 +1,30 @@
+{
+  name: "icymat/orm",
+  type: "orm",
+  description: "IcyMat Simple Object-Relational Mapping",
+  keywords: [
+    "ORM",
+    "Object-Relational Mapping"
+  ],
+  homepage: "http://icymat.pl",
+  license: "MIT",
+  authors: [
+    {
+      name: "Mateusz Kolasa",
+      email: "kontakt@mkolasa.eu",
+    }
+  ],
+  require: {
+    php: "^5.5.9 || ^7.0"
+  },
+  require-dev: { },
+  conflict: { },
+  autoload: {
+    psr-4: {
+      IcyMat\ORM\: ""
+    },
+  },
+  support: {
+    docs: "https://icymat.pl#contact"
+  },
+}
