@@ -3,7 +3,8 @@ IcyMat ORM
 
 Simple ORM mechanism created for my projects. For using this ORM you should use MySQL database.
 
-#How to use
+Base entity
+----------
 
 Each Entity class should extends `\IcyMat\ORM\BaseEntity` class. Each table at the database should contain integer and auto incremented `id` field. Example Entity class should looks like:
 
@@ -20,7 +21,8 @@ class ExampleEntity extends \IcyMat\ORM\BaseEntity
 }
 ```
 
-##Get and set data
+Get and set data
+----------
 Set data:
 ```php
 <?php
