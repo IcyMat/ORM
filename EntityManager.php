@@ -169,6 +169,20 @@ class EntityManager {
 		return $entity;
 	}
 
+    /**
+     * @param string $entityName
+     * @param array $conditions
+     * @param array $variables
+     * @param string $parameter
+     * @return ArrayCollection
+     * @throws DatabaseException
+     * @throws ORMNotFoundException
+     * @deprecated
+     */
+    public function where($entityName, array $conditions = array(), array $variables = array(), $parameter = 'AND') {
+	    return $this->findBy($entityName, $conditions, $variables, $parameter);
+    }
+
 	/**
 	 * @param string $entityName
 	 * @param array $conditions
@@ -178,7 +192,7 @@ class EntityManager {
 	 * @throws DatabaseException
 	 * @throws ORMNotFoundException
 	 */
-	public function where($entityName, array $conditions = array(), array $variables = array(), $parameter = 'AND') {
+	public function findBy($entityName, array $conditions = array(), array $variables = array(), $parameter = 'AND') {
 		/** @var BaseEntity $entity */
 		$entity = new $entityName();
 
